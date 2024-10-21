@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #74ebd5, #acb6e5); /* Stylish gradient background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  background: linear-gradient(135deg, #f6d365, #fda085); /* Gradient background for card */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  border-radius: 20px; /* More rounded corners for a modern look */
+  padding: 30px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px; /* Adjusted width for better readability */
+  animation: slideIn 1s ease; /* Subtle slide-in animation */
+  border: 2px solid #ececec; /* Light border for a cleaner look */
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #6c5ce7; /* Stylish underline for the header */
+  padding-bottom: 10px;
+}
+
+h4 {
+  margin: 0;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+h1 {
+  color: #222;
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.inc-exp-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for section contrast */
+  padding: 15px;
+  border-radius: 12px; /* Rounded corners for a smooth look */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Inner shadow effect */
+  transition: background-color 0.3s ease;
+}
+
+.inc-exp-container:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Slight color change on hover */
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.inc-exp-container > div:last-of-type {
+  border-right: none; /* Removing last border for cleaner look */
+}
+
+.money-plus {
+  color: #2ecc71;
+  font-size: 1.3rem;
+}
+
+.money-minus {
+  color: #e74c3c;
+  font-size: 1.3rem;
+}
+
+label {
+  display: inline-block;
+  margin: 15px 0 5px;
+  color: #444;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #dedede;
+  border-radius: 8px; /* Smoother rounded corners for inputs */
+  display: block;
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #6c5ce7; /* Highlight border on focus */
+  box-shadow: 0 0 8px rgba(108, 92, 231, 0.5); /* Shadow effect on focus */
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #6c5ce7;
+  color: #fff;
+  border: none;
+  border-radius: 30px; /* Fully rounded button */
+  display: block;
+  font-size: 18px;
+  margin: 20px 0;
+  padding: 15px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #5a4fcf; /* Color change on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.list li {
+  background-color: #ffffff;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for list items */
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 12px;
+  margin: 10px 0;
+  transition: transform 0.2s ease;
+}
+
+.list li:hover {
+  transform: translateX(10px); /* Slide effect on hover */
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #e74c3c;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 50%;
+  padding: 5px 8px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .inc-exp-container {
+    flex-direction: column; /* Stack sections vertically on small screens */
+  }
+
+  .inc-exp-container > div {
+    border: none;
+    margin: 10px 0; /* Adjusted margin for small screens */
+  }
+
+  .container {
+    width: 95%; /* Responsive container width */
+  }
+}
